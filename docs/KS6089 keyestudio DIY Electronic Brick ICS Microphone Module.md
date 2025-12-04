@@ -4,13 +4,11 @@
 
 ## 1. Introduction
 
-This module mainly adopts an ICS-43432 digital microphone chip, which is a high-performance and low-noise MEMS microphone with a bottom microphone hole. It is equipped with an internal MEMS sensor, Σ-Δ ADC, anti-aliasing filter, power manager and interfaces conforming to the I2S standard, and it can directly output 24-bit digital audio signals.
-
-Besides, it is compatible with various MCU control boards, including Arduino series, ESP32, Raspberry PI Pico, etc. Meanwhile, two positioning holes are reserved on it with a diameter of 4.8mm, which is convenient for fixing it on other devices.
+This module mainly adopts an ICS-43432 digital microphone chip, which is a high-performance and low-noise MEMS microphone with a bottom microphone hole. It is equipped with an internal MEMS sensor, Σ-Δ ADC, anti-aliasing filter, power manager and interfaces conforming to the I2S standard, and it can directly output 24-bit digital audio signals. Besides, two positioning holes are reserved on it with a diameter of 4.8mm, which is convenient for fixing it on other devices.
 
 ## 2. Parameters
 
-- **Operating voltage** : 1.6V - 3.3V DC
+- **Operating voltage** : 3.3V - 5V DC
 - **Interface** : I2S digital interface
 - **Signal-to-noise ratio** : 65 dBA
 - **Sensitivity** : -26 dBFS
@@ -51,8 +49,8 @@ The I2S bus consists of three main signals:
 
 ## 4. Pin Description
 
-- **GND**: power ground
-- **VDD**: power positive (+3.3V)
+- **G**: power ground
+- **V**: power positive
 - **SCK**: bit clock input
 - **DIN**: data output
 - **WS**: Left and right channel clocks
@@ -70,8 +68,8 @@ The I2S bus consists of three main signals:
 
 | Microphone module | ESP32 development board |
 | ----------------- | ----------------------- |
-| VDD               | 3.3V                    |
-| GND               | GND                     |
+| V                 | 3.3V                    |
+| G                 | GND                     |
 | SCK               | GPIO14                  |
 | WS                | GPIO12                  |
 | DIN               | GPIO13                  |
